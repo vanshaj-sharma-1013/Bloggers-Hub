@@ -90,7 +90,7 @@ export default function CategoriesShowcase() {
                 href="#"
                 onMouseEnter={() => setHoveredId(category.id)}
                 onMouseLeave={() => setHoveredId(null)}
-                className="group"
+                className="group" 
               >
                 <div
                   className={`relative h-48 md:h-56 p-5 md:p-6 lg:p-8 rounded-xl md:rounded-2xl border transition-all duration-300 overflow-hidden ${isHovered ? "border-blue-400 dark:border-white/30 shadow-2xl dark:shadow-2xl" : "border-slate-300 dark:border-slate-700/50"}`}
