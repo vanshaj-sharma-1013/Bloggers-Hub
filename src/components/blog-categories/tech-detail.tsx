@@ -1,4 +1,4 @@
-import { Blog } from "../../lib/dummyBlogs";
+import { Blog } from "../../../lib/dummyBlogs";
 
 export default function TechDetail({ blog }: { blog: Blog }) {
   return (

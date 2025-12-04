@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Search } from "lucide-react";
 import ThemeToggle from "../theme-toggle";
-import { CATEGORIES } from "@/src/lib/dummyBlogs";
+import { CATEGORIES } from "@/lib/dummyBlogs";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);

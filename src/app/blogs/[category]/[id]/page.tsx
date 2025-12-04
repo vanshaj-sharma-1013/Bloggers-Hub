@@ -2,7 +2,7 @@ import DefaultDetail from '../../../../components/blog-categories/default-detail
 import FoodDetail from '../../../../components/blog-categories/food-detail'
 import TechDetail from '../../../../components/blog-categories/tech-detail'
 import TravelDetail from '../../../../components/blog-categories/travel-detail'
-import { getBlogByCategoryAndId } from '../../../../lib/dummyBlogs'
+import { getBlogByCategoryAndId } from '../../../../../lib/dummyBlogs'
 import { notFound } from "next/navigation";
 
 type Props = {

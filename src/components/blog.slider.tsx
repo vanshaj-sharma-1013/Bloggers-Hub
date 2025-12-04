@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import BlogCard from "./blog-card";
-import { Blog } from "../lib/dummyBlogs";
+import { Blog } from "../../lib/dummyBlogs";
 
 interface BlogSliderProps {
   category: string;

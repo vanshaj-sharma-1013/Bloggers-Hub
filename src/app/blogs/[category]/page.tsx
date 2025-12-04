@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { blogs } from "../../../lib/dummyBlogs";
+import { blogs } from "../../../../lib/dummyBlogs";
 import { notFound } from "next/navigation";
 
 type Props = {

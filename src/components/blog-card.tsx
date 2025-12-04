@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ArrowRight, Calendar, User, Clock } from "lucide-react";
-import { Blog } from "../lib/dummyBlogs";
+import { Blog } from "../../lib/dummyBlogs";
 import Image from "next/image";
 
 interface BlogCardProps {

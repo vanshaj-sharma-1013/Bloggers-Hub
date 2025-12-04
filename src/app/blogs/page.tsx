@@ -1,7 +1,7 @@
 "use client";
 
 import BlogSlider from "@/src/components/blog.slider";
-import { blogs, CATEGORIES } from "@/src/lib/dummyBlogs";
+import { blogs, CATEGORIES } from "@/lib/dummyBlogs";
 import { useParallax } from "react-scroll-parallax";
 
 export default function Home() {
