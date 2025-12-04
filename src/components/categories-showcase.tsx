@@ -1,8 +1,15 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Code, TrendingUp, Briefcase, BookOpen, BarChart3, Zap } from "lucide-react"
-import { useState } from "react"
+import Link from "next/link";
+import {
+  Code,
+  TrendingUp,
+  Briefcase,
+  BookOpen,
+  BarChart3,
+  Zap,
+} from "lucide-react";
+import { useState } from "react";
 
 const categories = [
   {
@@ -53,13 +60,13 @@ const categories = [
     color: "from-cyan-600 to-blue-500",
     bgColor: "bg-cyan-500/10",
   },
-]
+];
 
 export default function CategoriesShowcase() {
-  const [hoveredId, setHoveredId] = useState<string | null>(null)
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   return (
-    <section className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-slate-100 via-blue-50 to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden transition-colors duration-300">
+    <section className="w-full py-16 md:py-24 lg:py-32 bg-linear-to-b from-slate-100 via-blue-50 to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden transition-colors duration-300">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float"></div>
         <div
@@ -72,17 +79,19 @@ export default function CategoriesShowcase() {
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
             Explore{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
               Categories
             </span>
           </h2>
-          <p className="text-base md:text-lg text-slate-400">Dive into content tailored to your interests</p>
+          <p className="text-base md:text-lg text-slate-400">
+            Dive into content tailored to your interests
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {categories.map((category) => {
-            const Icon = category.icon
-            const isHovered = hoveredId === category.id
+            const Icon = category.icon;
+            const isHovered = hoveredId === category.id;
 
             return (
               <Link
@@ -90,19 +99,27 @@ export default function CategoriesShowcase() {
                 href="#"
                 onMouseEnter={() => setHoveredId(category.id)}
                 onMouseLeave={() => setHoveredId(null)}
-                className="group" 
+                className="group"
               >
                 <div
-                  className={`relative h-48 md:h-56 p-5 md:p-6 lg:p-8 rounded-xl md:rounded-2xl border transition-all duration-300 overflow-hidden ${isHovered ? "border-blue-400 dark:border-white/30 shadow-2xl dark:shadow-2xl" : "border-slate-300 dark:border-slate-700/50"}`}
+                  className={`relative h-48 md:h-56 p-5 md:p-6 lg:p-8 rounded-xl md:rounded-2xl border transition-all duration-300 overflow-hidden ${
+                    isHovered
+                      ? "border-blue-400 dark:border-white/30 shadow-2xl dark:shadow-2xl"
+                      : "border-slate-300 dark:border-slate-700/50"
+                  }`}
                 >
                   <div
-                    className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+                    className={`absolute inset-0 bg-linear-to-br ${category.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
                   ></div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-slate-200/50 dark:from-slate-800/80 to-slate-100/50 dark:to-slate-900/80"></div>
+                  <div className="absolute inset-0 bg-linear-to-br from-slate-200/50 dark:from-slate-800/80 to-slate-100/50 dark:to-slate-900/80"></div>
 
                   {/* Animated accent line */}
                   <div
-                    className={`absolute top-0 left-0 h-1 bg-gradient-to-r ${category.color} transition-all duration-300 ${isHovered ? "w-full" : "w-0"}`}
+                    className={`absolute top-0 left-0 h-1 bg-linear-to-r ${
+                      category.color
+                    } transition-all duration-300 ${
+                      isHovered ? "w-full" : "w-0"
+                    }`}
                   ></div>
 
                   <div className="relative z-10 h-full flex flex-col justify-between">
@@ -128,16 +145,21 @@ export default function CategoriesShowcase() {
                         stroke="currentColor"
                         viewBox="0 0 24 24"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
                       </svg>
                     </div>
                   </div>
                 </div>
               </Link>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }
